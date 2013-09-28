@@ -1,0 +1,11 @@
+{
+    "name": "Gocrata",
+    "version": "2.0.0",
+    "author": "Glavin Wiechert <glavin.wiechert@gmail.com>",
+    "description": "RESTful not Stressful API",
+    "dependencies": {
+        "express": "*",
+        "mongoskin": "*",
+        "crypto": "*"
+    }
+}

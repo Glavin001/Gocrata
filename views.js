@@ -1,9 +1,10 @@
 // Views
-module.exports = function() {
+module.exports = function(params) {
   var express = require('express');
   var app = express();
-  
-  app.use("/geospatial", require('./views/geospatial'));
+  var db = params;
+
+  // app.use("/geospatial", require('./views/geospatial')(db));
 
   return app;
-}();
+};

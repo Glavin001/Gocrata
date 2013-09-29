@@ -1,22 +1,20 @@
 // Views
-module.exports = function() {
+module.exports = function(params) {
   var express = require('express');
-  var tools = require("./tools");
   var app = express();
+  var db = params;
+  var geo = db.collection('geo');
 
   //
   app.get('/', function(req, res) {
-    tools.auth(req, res, function(req, res) {
-      res.json({
-        'geoNear': '/api/util/geoNear',
-        'geoWithBB': '/api/util/geoWithBB',
-        'gotime': '/api/util/gotime'
-      });
+    res.json({
+      'geoNear': '/api/util/geoNear',
+      'geoWithBB': '/api/util/geoWithBB',
+      'gotime': '/api/util/gotime'
     });
   });
 
   // Utilities
-  //   app.use("/geospatial", require('./views/geospatial'));
   app.get('/api/util/geoNear', function(req, res) {
     res.status(501).json({'error':'Not yet implemented.'});
   });
@@ -28,4 +26,4 @@ module.exports = function() {
   });
 
   return app;
-}();
+};

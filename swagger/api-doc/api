@@ -1,0 +1,53 @@
+{
+  "apiVersion": "1.0.0",
+  "swaggerVersion": "1.2",
+  "apis": [
+    {
+      "path": "/../geospatial",
+      "description": "Operations about Geospatial"
+    }
+  ],
+  "authorizations": {
+    "oauth2": {
+      "type": "oauth2",
+      "scopes": [
+        "PUBLIC"
+      ],
+      "grantTypes": {
+        "implicit": {
+          "loginEndpoint": {
+            "url": "http:\/\/petstore.swagger.wordnik.com\/api\/oauth\/dialog"
+          },
+          "tokenName": "access_code"
+        },
+        "authorization_code": {
+          "tokenRequestEndpoint": {
+            "url": "http:\/\/petstore.swagger.wordnik.com\/api\/oauth\/requestToken",
+            "clientIdName": "client_id",
+            "clientSecretName": "client_secret"
+          },
+          "tokenEndpoint": {
+            "url": "http:\/\/petstore.swagger.wordnik.com\/api\/oauth\/token",
+            "tokenName": "access_code"
+          }
+        }
+      }
+    },
+    "apiKey": {
+      "type": "apiKey",
+      "keyName": "api_key",
+      "passAs": "header"
+    },
+    "basicAuth": {
+      "type": "basicAuth"
+    }
+  },
+  "info": {
+    "title": "Gocrata",
+    "description": "The RESTful not stressful API.",
+    "termsOfServiceUrl": "http:\/\/helloreverb.com\/terms\/",
+    "contact": "apiteam@wordnik.com",
+    "license": "Apache 2.0",
+    "licenseUrl": "http:\/\/www.apache.org\/licenses\/LICENSE-2.0.html"
+  }
+}

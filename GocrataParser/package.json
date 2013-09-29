@@ -1,0 +1,9 @@
+{
+    "name": "GocrataParser",
+    "version": "1.0.0",
+    "author": "Scott Wesley and Liam Coleman-Aulenbach",
+    "description": "Making KML more usable",
+    "dependencies": {
+        "cheerio": "*"
+    }
+}

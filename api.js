@@ -25,9 +25,15 @@ module.exports = function(params) {
       'geospatial': '/api/geospatial'
     });
   });
-  
   // Geospatial
   app.use("/geospatial", require('./views/geospatial')(db));
+
+  // Documentation
+  app.get("/doc", function(req, res) {
+    res.json(
+      {}
+    );
+  });
 
   return app;
 };

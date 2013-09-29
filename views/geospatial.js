@@ -22,14 +22,14 @@ module.exports = function(params) {
     });
   });
   // Read
-  app.get("/:id", function(req, res) {
+  app.get("/id/:id", function(req, res) {
   console.log(req.params);
     geo.find({ "_id": db.bson_serializer.ObjectID.createFromHexString(req.params.id) }, {limit: 1 }).toArray( function(err, row) { 
       res.json(row);
     });
   });
   // Update
-  app.all('/:id', function (req, res, next) {
+  app.all('/id/:id', function (req, res, next) {
     if (req.method === 'PUT' || req.method === 'POST') {
       // Update
       res.status(501).json({'error':'Not yet implemented.'});    
@@ -38,11 +38,18 @@ module.exports = function(params) {
     }
   });
   // Delete
-  app.del('/:id', function(req, res) {
+  app.del('/id/:id', function(req, res) {
     geo.remove({"_id": db.bson_serializer.ObjectID.createFromHexString(req.params.id) },{ },function(err, row) {
       console.log(err);
       res.json(row);
     });   
+  });
+  
+  
+  // Documentation
+  app.get("/doc", function(req, res) {
+    res.json({}
+    );
   });
 
   return app;

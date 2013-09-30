@@ -6,6 +6,8 @@
     "dependencies": {
         "express": "*",
         "mongoskin": "*",
-        "crypto": "*"
-    }
+        "crypto": "*",
+        "request": "*",
+        "cheerio": "*"
+   }
 }

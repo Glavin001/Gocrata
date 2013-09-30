@@ -6,7 +6,6 @@ var express = require("express");
 var https = require('https');
 var http = require('http');
 var crypto = require("crypto");
-var tools = require("./tools");
 // Setup
 var Db = mongo.Db;
 var connection = mongo.Connection;
@@ -49,6 +48,9 @@ console.log('Connecting to MongoDB');
 var client = new Db('gocrata', new Server("localhost", 27017, {}), {safe:false});
 client.open(function(err, client) {
     console.log('Connected to MongoDB!');
+    
+    var tools = require("./tools")(client);
+    
     /*
     // Secure all requests    
     app.all('*', function(req, res, next) {

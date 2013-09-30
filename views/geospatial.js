@@ -23,8 +23,14 @@ module.exports = function(params) {
   });
   // Read
   app.get("/id/:id", function(req, res) {
-  console.log(req.params);
-    geo.find({ "_id": db.bson_serializer.ObjectID.createFromHexString(req.params.id) }, {limit: 1 }).toArray( function(err, row) { 
+    console.log(req.params);
+    geo.find({ "_id": db.bson_serializer.ObjectID.createFromHexString(req.params.id) }, { }).toArray( function(err, row) { 
+      res.json(row);
+    });
+  });
+  app.get("/type/:type", function(req, res) {
+    console.log(req.params);
+    geo.find({ "type": req.params.type }, { }).toArray( function(err, row) { 
       res.json(row);
     });
   });

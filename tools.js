@@ -2,7 +2,7 @@
 module.exports = function(params) {
   var crypto = require("crypto");  
   var db = params;
-
+  
   //
   var self = { };
   

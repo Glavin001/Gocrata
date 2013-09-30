@@ -28,6 +28,17 @@ var fs = require('fs'),
 var type = "geo";
 
 // Module
+/* Usage:   
+var kmlNodeParser = require("./GocrataParser/kmlNodeParser");
+kmlNodeParser(filePath,function(placemark) { 
+  //console.log("New placemark:");
+  console.dir(placemark); 
+  // Push placemark into collection "geo"
+  // geo.insert(placemark); // geo = mongoDB collection db."geo" 
+}, function(placemarks) { 
+  console.log("===> Done with "+placemarks.length+" placemarks."); 
+});
+*/ 
 module.exports = function() {
   console.log("kmlNodeParser");
   var parseData = function (filePath, placemarkCallback, completionCallback) {

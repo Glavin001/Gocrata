@@ -85,7 +85,7 @@ module.exports = function(params) {
                         return wgetDownloadFile(filePath, geoDataUrl, function() { 
                           console.log("Done downloading '"+view.name+"' geo data"); 
 
-                          console.log("Using KML Node Parser on "+filePath);
+                          console.log("==> Using KML Node Parser on "+filePath);
                           kmlNodeParser(filePath,function(placemark) { 
                             //console.log("New placemark:");
                             // Tags
@@ -98,7 +98,7 @@ module.exports = function(params) {
                             geo.insert(placemark);
                             
                           }, function(placemarks) { 
-                            console.log("Done with '"+view.name+"', "+placemarks.length+" placemarks."); 
+                            console.log("===> Done with '"+view.name+"', "+placemarks.length+" placemarks."); 
                           });
                         });
                       })(view, filePath, geoDataUrl);
@@ -131,10 +131,10 @@ module.exports = function(params) {
     
     (function (filePath, fileUrl, callback) {
       return function() {
-        //console.log("Downloading file '"+fileUrl+"' to '"+filePath+"'");
+        console.log("Downloading file '"+fileUrl+"' to '"+filePath+"'");
         // compose the wget command
         var wget = 'wget -O "'+filePath+'" "'+fileUrl+'"';
-        //console.log(wget);
+        console.log(wget);
       
         // TEMPORARY: Disable actually downloading
         // return callback && callback();

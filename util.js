@@ -87,18 +87,18 @@ module.exports = function(params) {
 
                           console.log("Using KML Node Parser on "+filePath);
                           kmlNodeParser(filePath,function(placemark) { 
-                            console.log("New placemark:");
+                            //console.log("New placemark:");
                             // Tags
                             placemark.tags = view.tags;
                             // Source
                             placemark.source = curr;
-                            console.dir(placemark); 
+                            // console.dir(placemark); 
                             
                             // Push placemark into collection "geo"
                             geo.insert(placemark);
                             
                           }, function(placemarks) { 
-                            console.log("Done with "+placemarks.length+" placemarks."); 
+                            console.log("Done with '"+view.name+"', "+placemarks.length+" placemarks."); 
                           });
                         });
                       })(view, filePath, geoDataUrl);
@@ -131,10 +131,10 @@ module.exports = function(params) {
     
     (function (filePath, fileUrl, callback) {
       return function() {
-        console.log("Downloading file '"+fileUrl+"' to '"+filePath+"'");
+        //console.log("Downloading file '"+fileUrl+"' to '"+filePath+"'");
         // compose the wget command
         var wget = 'wget -O "'+filePath+'" "'+fileUrl+'"';
-        console.log(wget);
+        //console.log(wget);
       
         // TEMPORARY: Disable actually downloading
         // return callback && callback();
@@ -145,7 +145,7 @@ module.exports = function(params) {
               // throw err;
               return console.error(err);
             } else {
-              console.log("'"+fileUrl+"' downloaded to '"+filePath+"'.");
+              //console.log("'"+fileUrl+"' downloaded to '"+filePath+"'.");
               return callback && callback();
             }
         });

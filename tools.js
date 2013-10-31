@@ -1,7 +1,7 @@
 // Common 
 module.exports = function(params) {
   var crypto = require("crypto");  
-  var db = params;
+  var conn = params;
   
   //
   var self = { };

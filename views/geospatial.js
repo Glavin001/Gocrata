@@ -2,15 +2,29 @@
 module.exports = function(params) {
   var express = require('express');
   var app = express();
-  var db = params;
-  var geo = db.collection('geo');
-  
+  //var db = params;
+  //var geo = db.collection('geo'); // MongoDB
+  var conn = params;
+  var r = require("rethinkdb");
+  var db = r.db('gocrata');
+  var geo = db.table("geospatial");
+
   // Root
   app.get("/", function(req, res) {
+    /*
     geo.find({}, {limit: 10}).toArray( function(err, rows) {
       console.log(rows);
       res.json(rows);
     });
+    */
+    geo.run(conn, function(err, cursor) {
+        if (err) throw err;
+        cursor.toArray(function(err, result) {
+          if (err) throw err;
+          // console.log(JSON.stringify(result, null, 2));
+          res.json(result);
+        });
+      });
   });
   
   // Create

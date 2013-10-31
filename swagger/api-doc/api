@@ -3,6 +3,10 @@
   "swaggerVersion": "1.2",
   "apis": [
     {
+      "path": "/../util",
+      "description": "Operations about Utilities"
+    },
+    {
       "path": "/../geospatial",
       "description": "Operations about Geospatial"
     }

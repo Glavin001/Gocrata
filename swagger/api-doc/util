@@ -8,11 +8,11 @@
   ],
   "apis": [
     {
-      "path": "/geospatial/id/{id}",
+      "path": "/update/sources",
       "operations": [
         {
           "method": "GET",
-          "summary": "Get geo data by document id",
+          "summary": "Update sources.",
           "notes": "",
           "type": "User",
           "nickname": "getUserByName",
@@ -39,11 +39,11 @@
       ]
     },
     {
-      "path": "/geospatial/type/{id}",
+      "path": "/geoNear",
       "operations": [
         {
           "method": "GET",
-          "summary": "Get geo data by type",
+          "summary": "geo Geo near point with radius.",
           "notes": "",
           "type": "User",
           "nickname": "getUserByName",
@@ -70,37 +70,54 @@
       ]
     },
     {
-      "path": "/geospatial/id/{id}",
+      "path": "/geoWithBB",
       "operations": [
         {
           "method": "GET",
-          "summary": "Get user by user name",
+          "summary": "Get Geo with Bounding Box",
           "notes": "",
-          "type": "User",
-          "nickname": "getUserByName",
+          "type": "string",
+          "nickname": "loginUser",
           "parameters": [
             {
-              "name": "id",
-              "description": "The identifier of the document in the database. Use user1 for testing.",
+              "name": "username",
+              "description": "The user name for login",
               "required": true,
               "type": "string",
-              "paramType": "path"
+              "paramType": "query"
+            },
+            {
+              "name": "password",
+              "description": "The password for login in clear text",
+              "required": true,
+              "type": "string",
+              "paramType": "query"
             }
           ],
           "responseMessages": [
             {
               "code": 400,
-              "message": "Invalid username supplied"
-            },
-            {
-              "code": 404,
-              "message": "User not found"
+              "message": "Invalid username and password combination"
             }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/gotime",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Get data from Gotime number.",
+          "notes": "",
+          "type": "void",
+          "nickname": "logoutUser",
+          "parameters": [
+        
           ]
         }
       ]
     }
-    
   ],
   "models": {
     "User": {

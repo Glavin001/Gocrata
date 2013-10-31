@@ -8,6 +8,7 @@
         "mongoskin": "*",
         "crypto": "*",
         "request": "*",
-        "cheerio": "*"
+        "cheerio": "*",
+        "rethinkdb": "*"
    }
 }

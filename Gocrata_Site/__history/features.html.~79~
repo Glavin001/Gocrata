@@ -1,0 +1,60 @@
+<html>
+	<header>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/custom.css">
+		<title>Gocrata Features</title>
+	</header>
+	<body>
+		<!--Navbar-->
+		<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+			<div class="container">
+				<h4 class="navbar-text navbar-left">Gocrata</h3>
+				
+				<ul class="nav navbar-nav navbar-left">
+					<li><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+					<li class="active"><a href="#"><span class="glyphicon glyphicon-list"></span> Features</a></li>
+					<li><a href="apps.html"><span class="glyphicon glyphicon-book"></span> Apps</a></li>
+					<li><a href="services.html"><span class="glyphicon glyphicon-gift"></span> Services</a></li>
+				</ul>
+				
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="about.html">About</a></li>
+				</ul>
+			</div>
+		</nav>
+		
+		<!--Jumbotron-->
+		<div class="jumbotron">
+			<span>
+				Image Credit: <a href="http://www.flickr.com/photos/hobolens/" target="_blank">Brian</a> | <a href="http://creativecommons.org/licenses/by/2.0/deed.en" target="_blank">Creative Commons Attribution License</a>
+			</span>
+		</div>
+		
+		<!--Main page contents-->
+		<div class="container body">
+			<!--Main Content-->
+			<div class="row">
+					<div class="col-md-4 details">
+						<h1>Easy to Use API</h1>
+						<p>The Gocrata API aims to be simple to use while still providing comprehensive Halifax data. Take a moment to look over it's documentation.</p>
+						<p><a href="features/api_docs.html" class="btn btn-primary" role="button" target="_blank">Find Out More</a></p>
+					</div>
+					<div class="col-md-4 details">
+						<h1>Comprehensive Data</h1>
+						<p>The Gocrata server supports queries for many different kinds of data, provided by Socrata and the HRM. Each data set contains statistically and/or geographically data when appropriate.</p>
+						<p><a href="features/data_sets.html" class="btn btn-primary" role="button" target="_blank">Find Out More</a></p>
+					</div>
+					<div class="col-md-4 details">
+						<h1>Cross-Platform</h1>
+						<p>The Gocrata API does not require a specific platform to work. As long as your application supports server requests and JSON data, the Gocrata API will handle the rest</p>
+						<p><a href="features/coming_soon.html" class="btn btn-primary" role="button" target="_blank">Find Out More</a></p>
+					</div>
+			</div>
+		</div>
+		
+		<!--Bootstrap imports-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>

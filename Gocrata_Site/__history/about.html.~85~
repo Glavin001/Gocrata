@@ -1,0 +1,68 @@
+<html>
+	<header>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/custom.css">
+		<title>About Gocrata</title>
+	</header>
+	<body>
+		<!--Navbar-->
+		<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+			<div class="container">
+				<h4 class="navbar-text navbar-left">Gocrata</h3>
+				
+				<ul class="nav navbar-nav navbar-left">
+					<li><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+					<li><a href="features.html"><span class="glyphicon glyphicon-list"></span> Features</a></li>
+					<li><a href="apps.html"><span class="glyphicon glyphicon-book"></span> Apps</a></li>
+					<li><a href="services.html"><span class="glyphicon glyphicon-gift"></span> Services</a></li>
+				</ul>
+				
+				<ul class="nav navbar-nav navbar-right">
+					<li class="active"><a href="#">About</a></li>
+				</ul>
+			</div>
+		</nav>
+		
+		<!--Jumbotron-->
+		<div class="jumbotron">
+			<span>
+				Image Credit: <a href="http://www.flickr.com/photos/hobolens/" target="_blank">Brian</a> | <a href="http://creativecommons.org/licenses/by/2.0/deed.en" target="_blank">Creative Commons Attribution License</a>
+			</span>
+		</div>
+		
+		<!--Main page contents-->
+		<div class="container body">
+			<!--History-->
+			<div class="row">
+				<div class="col-md-12">
+						<h1>Gocrata <small>History and Goals</small></h1>
+						<p>Gocrata was conceived by Glavin Wiechert at the three day Halifax Open Data Hackathon. Its primary goal was to improve the accessibility of the preexisting data sets provided by the HRM. To make this vision possible, Glavin formed a development team with Liam Coleman-Aulenbach and Scott Wesley. At the end of the three day period a prototype was produced, capable of processing the data and storing it in a queriable format.</p>
+						<p>Due to other commitments, Glavin was not able to continue work on the Gocrata project. Liam and Scott continued the project, however, and moved it forward to its current state.</p>
+				</div>
+			</div>
+			<!--Devs-->
+			<div class="row">
+					<div class="col-md-12">
+						<h1>Gocrata <small>Developers</small></h1>
+					</div>
+					<div class="col-md-4 details">
+						<h3>Glavin Wiechert</h3>
+						<p>Glavin Wiechert is a part-time student at Saint Mary's University, and also a co-founder of Streamlyne.</p>
+					</div>
+					<div class="col-md-4 details">
+						<h3>Scott Wesley</h3>
+						<p>Coming soon</p>
+					</div>
+					<div class="col-md-4">
+						<h3>Liam Coleman-Aulenbach</h3>
+						<p>Coming soon</p>
+					</div>
+			</div>
+		</div>
+		
+		<!--Bootstrap imports-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>

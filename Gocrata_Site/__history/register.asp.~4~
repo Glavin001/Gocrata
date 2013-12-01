@@ -1,0 +1,22 @@
+<%@ Language="VBscript" %>
+<html>
+	<head>
+		<title>Submitted data</title>
+	</head>
+
+	<body>
+		<%
+		'declares all submitted values
+		Dim name, email, comment
+		'receive the values sent from the form and assign them to variables
+		name=Request.Form("name")
+		email=Request.Form("email")
+		comment=Request.Form("commercial")
+
+		'let's now print out the received values in the browser
+		Response.Write("Name: " & name & "<br>")
+		Response.Write("E-mail: " & email & "<br>")
+		Response.Write("Comments: " & commercial & "<br>")
+		%> 
+	</body>
+</html>

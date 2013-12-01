@@ -1,0 +1,38 @@
+body {
+	background-color: #161616;
+}
+.navbar {
+	background-color: #080808;
+	margin-bottom:0;
+}
+.jumbotron {
+	position: relative;
+	height: 300px;
+	border-bottom: 1px solid #000;
+	background: url("../img/cityscape.png");
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:100%;
+}
+.jumbotron span{
+    position: absolute;
+    font-size:15px;
+    color: #fff;
+    bottom: 0px;
+    right: 0px;
+    padding: 0px 10px;    
+}
+.jumbotron br {
+	margin: 0px 0px;
+	padding: 0px 0px;
+}
+.details {
+	text-align: center;
+}
+.row {
+	color: #FFFFFF;
+	padding: 20px;
+	border-radius:10px;
+	background-color: #080808;
+	margin-bottom: 30px;
+}

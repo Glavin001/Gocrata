@@ -46,7 +46,7 @@ app.configure(function() {
 
 // Connect to RethinkDB
 console.log('Connecting to RethinkDB');
-r.connect({ host: 'localhost', port: 28015 }, function(err, conn) {
+r.connect({ host: '192.168.112.128', port: 28015 }, function(err, conn) {
   if(err) throw err;
   console.log('Connected to RethinkDB!');
   // Create Gocrata database

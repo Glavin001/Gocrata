@@ -1,0 +1,99 @@
+<html>
+<head>
+<title>Gocrata Data Sets</title>
+<script src="http://codeorigin.jquery.com/jquery-2.0.3.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"></link>
+
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+</head>
+<body>
+
+	<div class="container">
+
+<h2>Data Sets <small>Avaliable Sets</small></h2>
+
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="#" title="$gt"><tt class="xref mongodb mongodb-operator docutils literal"><span class="pre">Bus Stops</span></tt></a></td>
+<td>Contains <strong>point based</strong> data of bus stops in the HRM.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#" title="$gte"><tt class="xref mongodb mongodb-operator docutils literal"><span class="pre">Waste Collection</span></tt></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#" title="$in"><tt class="xref mongodb mongodb-operator docutils literal"><span class="pre">Trails</span></tt></a></td>
+<td>Contains <strong>line based</strong> data of all hiking trails in the HRM.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#" title="$lt"><tt class="xref mongodb mongodb-operator docutils literal"><span class="pre">Bylaws</span></tt></a></td>
+<td>Contains <strong>polygon based</strong> data of all bylaw zones in the HRM.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#" title="$lte"><tt class="xref mongodb mongodb-operator docutils literal"><span class="pre">Buildings</span></tt></a></td>
+<td>Contains <strong>polygon based</strong> data of all registered buildings in the HRM.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#" title="$ne"><tt class="xref mongodb mongodb-operator docutils literal"><span class="pre">Bus Routs</span></tt></a></td>
+<td>Contains <strong>line based</strong> data of all bus routes in the HRM.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#" title="$nin"><tt class="xref mongodb mongodb-operator docutils literal"><span class="pre">Civic Addresses</span></tt></a></td>
+<td>Contains <strong>point based</strong> data showing the location of each civic address in the HRM.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#" title="$nin"><tt class="xref mongodb mongodb-operator docutils literal"><span class="pre">Street Networks</span></tt></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#" title="$nin"><tt class="xref mongodb mongodb-operator docutils literal"><span class="pre">Zoning Boundaries</span></tt></a></td>
+<td>Contains <strong>polygon based</strong> data of all property zones in the HRM.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#" title="$nin"><tt class="xref mongodb mongodb-operator docutils literal"><span class="pre">Community Boundaries</span></tt></a></td>
+<td>Contains <strong>polygon based</strong> data displaying all communities in the HRM.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#" title="$nin"><tt class="xref mongodb mongodb-operator docutils literal"><span class="pre">Crime</span></tt></a></td>
+<td>Contains <strong>point based</strong> data of crimes commited recently in the HRM, along with the crime's details.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#" title="$nin"><tt class="xref mongodb mongodb-operator docutils literal"><span class="pre">Parks and Recreation</span></tt></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#" title="$nin"><tt class="xref mongodb mongodb-operator docutils literal"><span class="pre">Polling Districts</span></tt></a></td>
+<td>Contains <strong>polygon based</strong> data of each polling district in the HRM, along with political details.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Data Sets <small>Data Types</small></h2>
+
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%">
+<col width="82%">
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="#" title="$gt"><tt class="xref mongodb mongodb-operator docutils literal"><span class="pre">Point Data</span></tt></a></td>
+<td>A single point repersenting a specific location.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#" title="$gte"><tt class="xref mongodb mongodb-operator docutils literal"><span class="pre">Line Data</span></tt></a></td>
+<td>A set of two or more points repersenting a line. These points are returned in an array.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#" title="$in"><tt class="xref mongodb mongodb-operator docutils literal"><span class="pre">Polygon Data</span></tt></a></td>
+<td>Contains <strong>line based</strong> data of all hiking trails in the HRM.</td>
+</tr>
+
+</tbody>
+</table>
+
+</div>
+
+</body>
+</html>

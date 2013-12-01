@@ -9,6 +9,7 @@
         "crypto": "*",
         "request": "*",
         "cheerio": "*",
-        "rethinkdb": "*"
+        "rethinkdb": "*",
+        "commander": "*"
    }
 }

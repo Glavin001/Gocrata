@@ -1,6 +1,7 @@
 console.log('Starting Server');
 
 // Requirements
+var program = require("commander");
 var r = require('rethinkdb');
 //var mongo = require("mongoskin");
 var express = require("express");
@@ -11,6 +12,15 @@ var crypto = require("crypto");
 //var Db = mongo.Db;
 //var connection = mongo.Connection;
 //var Server = mongo.Server;
+//
+program
+  .version('2.0.1')
+  .option('-p, --port <PORT>', "Custom API Port. Defaults to port 5000", Number, 5000)
+  .option('--rethinkdb <HOST>', "Custom address for RethinkDB server. Defaults to localhost", String, "localhost")
+  .parse(process.argv);
+
+var port = program.port || process.env.PORT || defaultPort;
+
 var app = express();
 var serverOptions = {
   'author_reconnect': true,
@@ -46,7 +56,7 @@ app.configure(function() {
 
 // Connect to RethinkDB
 console.log('Connecting to RethinkDB');
-r.connect({ host: '192.168.112.128', port: 28015 }, function(err, conn) {
+r.connect({ host: program.rethinkdb, port: 28015 }, function(err, conn) {
   if(err) throw err;
   console.log('Connected to RethinkDB!');
   // Create Gocrata database
@@ -63,9 +73,9 @@ r.connect({ host: '192.168.112.128', port: 28015 }, function(err, conn) {
     // Root of API
     app.use('/api', require('./api')(conn));
     // Start listening
-    console.log('Starting Gocrata REST API');    
+    console.log('Starting Gocrata REST API on port '+port);    
     
-    app.listen(process.env.PORT || 5000);
+    app.listen(port);
     
   });
 });
